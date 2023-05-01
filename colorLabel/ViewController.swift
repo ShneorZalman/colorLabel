@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
 //    MARK: -ABOutlets
     
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         mainView.layer.cornerRadius = 10
     }
 
-    func changeColourView() {
+    private func changeColourView() {
         mainView.backgroundColor = UIColor(
             red: CGFloat(redSliderValue.value),
             green: CGFloat(greenSliderValue.value),
