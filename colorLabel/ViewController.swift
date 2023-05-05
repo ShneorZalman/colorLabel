@@ -13,50 +13,49 @@ final class ViewController: UIViewController {
     
     @IBOutlet var mainView: UIView!
     
-    @IBOutlet var redLabelValue: UILabel!
-    @IBOutlet var greenLabelValue: UILabel!
-    @IBOutlet var blueLabelValue: UILabel!
+    @IBOutlet var redLabel: UILabel!
+    @IBOutlet var greenLabel: UILabel!
+    @IBOutlet var blueLabel: UILabel!
     
-    @IBOutlet var redSliderValue: UISlider!
-    @IBOutlet var greenSliderValue: UISlider!
-    @IBOutlet var blueSliderValue: UISlider!
+    @IBOutlet var redSlider: UISlider!
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var blueSlider: UISlider!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redLabelValue.text = String(format: "%.2f", redSliderValue.value)
-        redSliderValue.maximumTrackTintColor = .clear
-        redSliderValue.minimumTrackTintColor = .red
+        mainView.layer.cornerRadius = 10
         
-        greenLabelValue.text = String(format: "%.2f", greenSliderValue.value)
-        greenSliderValue.minimumTrackTintColor = .green
-        greenSliderValue.maximumTrackTintColor = .clear
-        
-        blueLabelValue.text = String(format: "%.2f", blueSliderValue.value)
-        blueSliderValue.minimumTrackTintColor = .blue
-        blueSliderValue.maximumTrackTintColor = .clear
+        redLabel.text = String(format: "%.2f", redSlider.value)
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+        blueLabel.text = String(format: "%.2f", blueSlider.value)
         
         changeColourView()
-        mainView.layer.cornerRadius = 10
+        
+        
     }
-
+    
+//    MARK: -ABOActions
+   
+    @IBAction func setColour(_ sender: UISlider) {
+        changeColourView()
+        
+        switch sender {
+        case redSlider:
+            redLabel.text = String(format: "%.2f", redSlider.value)
+        case greenSlider:
+            greenLabel.text = String(format: "%.2f", greenSlider.value)
+        default:
+            blueLabel.text = String(format: "%.2f", blueSlider.value)
+        }
+    }
+    
     private func changeColourView() {
         mainView.backgroundColor = UIColor(
-            red: CGFloat(redSliderValue.value),
-            green: CGFloat(greenSliderValue.value),
-            blue: CGFloat(blueSliderValue.value),
-            alpha: 1)}
-
-//    MARK: -ABOActions
-    @IBAction func redSlider() {
-        redLabelValue.text = String(format: "%.2f", redSliderValue.value)
-        changeColourView()
-    }
-    @IBAction func greenSlider() {
-       greenLabelValue.text = String(format: "%.2f",greenSliderValue.value)
-        changeColourView()
-    }
-    @IBAction func blueSlider() {
-        blueLabelValue.text = String(format: "%.2f", blueSliderValue.value)
-        changeColourView()
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
+        
     }
 }
