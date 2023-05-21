@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16AA71A92A17910C00D98B24 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AA71A82A17910C00D98B24 /* MainViewController.swift */; };
 		16FB3E5329FEDEF40019BADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB3E5229FEDEF40019BADE /* AppDelegate.swift */; };
 		16FB3E5529FEDEF40019BADE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB3E5429FEDEF40019BADE /* SceneDelegate.swift */; };
-		16FB3E5729FEDEF40019BADE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB3E5629FEDEF40019BADE /* ViewController.swift */; };
+		16FB3E5729FEDEF40019BADE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB3E5629FEDEF40019BADE /* SettingViewController.swift */; };
 		16FB3E5A29FEDEF40019BADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FB3E5829FEDEF40019BADE /* Main.storyboard */; };
 		16FB3E5C29FEDEF70019BADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FB3E5B29FEDEF70019BADE /* Assets.xcassets */; };
 		16FB3E5F29FEDEF70019BADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FB3E5D29FEDEF70019BADE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16AA71A82A17910C00D98B24 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		16FB3E4F29FEDEF40019BADE /* colorLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FB3E5229FEDEF40019BADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16FB3E5429FEDEF40019BADE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16FB3E5629FEDEF40019BADE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16FB3E5629FEDEF40019BADE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		16FB3E5929FEDEF40019BADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16FB3E5B29FEDEF70019BADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16FB3E5E29FEDEF70019BADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,9 +39,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16AA71A72A1790EB00D98B24 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				16FB3E5229FEDEF40019BADE /* AppDelegate.swift */,
+				16FB3E5429FEDEF40019BADE /* SceneDelegate.swift */,
+				16FB3E6029FEDEF70019BADE /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		16AA71AA2A17911200D98B24 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				16FB3E5629FEDEF40019BADE /* SettingViewController.swift */,
+				16AA71A82A17910C00D98B24 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		16AA71AB2A17913600D98B24 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				16FB3E5829FEDEF40019BADE /* Main.storyboard */,
+				16FB3E5D29FEDEF70019BADE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		16FB3E4629FEDEF40019BADE = {
 			isa = PBXGroup;
 			children = (
+				16FB3E5B29FEDEF70019BADE /* Assets.xcassets */,
 				16FB3E5129FEDEF40019BADE /* colorLabel */,
 				16FB3E5029FEDEF40019BADE /* Products */,
 			);
@@ -56,13 +87,9 @@
 		16FB3E5129FEDEF40019BADE /* colorLabel */ = {
 			isa = PBXGroup;
 			children = (
-				16FB3E5229FEDEF40019BADE /* AppDelegate.swift */,
-				16FB3E5429FEDEF40019BADE /* SceneDelegate.swift */,
-				16FB3E5629FEDEF40019BADE /* ViewController.swift */,
-				16FB3E5829FEDEF40019BADE /* Main.storyboard */,
-				16FB3E5B29FEDEF70019BADE /* Assets.xcassets */,
-				16FB3E5D29FEDEF70019BADE /* LaunchScreen.storyboard */,
-				16FB3E6029FEDEF70019BADE /* Info.plist */,
+				16AA71A72A1790EB00D98B24 /* App */,
+				16AA71AA2A17911200D98B24 /* ViewControllers */,
+				16AA71AB2A17913600D98B24 /* Storyboards */,
 			);
 			path = colorLabel;
 			sourceTree = "<group>";
@@ -138,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16FB3E5729FEDEF40019BADE /* ViewController.swift in Sources */,
+				16FB3E5729FEDEF40019BADE /* SettingViewController.swift in Sources */,
 				16FB3E5329FEDEF40019BADE /* AppDelegate.swift in Sources */,
 				16FB3E5529FEDEF40019BADE /* SceneDelegate.swift in Sources */,
+				16AA71A92A17910C00D98B24 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5G4B9V9433;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = colorLabel/Info.plist;
+				INFOPLIST_FILE = colorLabel/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +348,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5G4B9V9433;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = colorLabel/Info.plist;
+				INFOPLIST_FILE = colorLabel/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
