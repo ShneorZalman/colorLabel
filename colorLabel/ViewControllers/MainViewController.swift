@@ -13,17 +13,11 @@ protocol SettingViewControllerDelegate: AnyObject {
 
 final class MainViewController: UIViewController {
     
-    var backgroundColor: UIColor = .white
-
-    override func viewDidLoad() {
-        view.backgroundColor = backgroundColor
-        super.viewDidLoad()
-    }
-    
+    var backgroundColor: UIColor!
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingVC = segue.destination as? SettingViewController else { return }
-        settingVC.backgroundColor = backgroundColor
+        settingVC.backgroundColor = view.backgroundColor
         settingVC.delegate = self
     }
 }

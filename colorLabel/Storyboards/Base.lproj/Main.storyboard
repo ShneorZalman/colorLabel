@@ -11,12 +11,12 @@
         <!--Main View Controller-->
         <scene sceneID="DB7-mf-sTk">
             <objects>
-                <viewController id="sfj-Wx-6FJ" customClass="MainViewController" customModule="colorLabel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sfj-Wx-6FJ" customClass="MainViewController" customModule="colorLabel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QqD-WK-NLl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="aAV-70-jVG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="dNJ-iN-eIv">
                         <barButtonItem key="rightBarButtonItem" title="Set Color" id="TE4-19-FdO">
@@ -181,7 +181,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CsR-PA-f21">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Ke-ed-kbR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="4Ke-ed-kbR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JS2-lB-xRj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>

@@ -27,6 +27,7 @@ final class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
             super.viewDidLoad()
+        setSliders()
             mainView.layer.cornerRadius = 10
             mainView.backgroundColor = backgroundColor
         
@@ -55,7 +56,7 @@ final class SettingViewController: UIViewController {
                 }
     }
     
-     func changeColorView() {
+     final func changeColorView() {
         mainView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
@@ -64,5 +65,11 @@ final class SettingViewController: UIViewController {
         
     }
 
+    func setSliders() {
+        let ciColor = CIColor(color: backgroundColor)
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
+    }
 }
 
